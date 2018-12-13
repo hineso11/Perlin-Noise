@@ -1,7 +1,11 @@
 
+
 // Initial setup of the sketch
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
+
+
+
+
 }
 
 // Drawing code for canvas
@@ -20,3 +24,4 @@ function resize () {
 
 // Set the listener for when the window is resized
 window.onresize = resize;
+
