@@ -14,6 +14,7 @@ function setup(){
         particles_b[i] = new Particle(random(0, width),random(0,height));
         particles_c[i] = new Particle(random(0, width),random(0,height));
     }
+
 }
 
 function draw(){

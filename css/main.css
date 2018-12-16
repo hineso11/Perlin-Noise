@@ -24,6 +24,7 @@ html, body {
 .headerColumn {
 
     height: 100%;
+    display:table;
 }
 
 
@@ -31,8 +32,26 @@ html, body {
 .title {
 
     height: 100%;
-
+    display:table-cell;
+    vertical-align:middle;
 }
+
+.buttonTable {
+
+    height: 100%;
+    position: relative;
+}
+.buttonRow {
+
+    height: 50%;
+}
+
+
+.controlButton {
+
+    border-radius: 0px !important;
+}
+
 
 .mainContent {
 
