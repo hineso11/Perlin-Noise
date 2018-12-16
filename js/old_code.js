@@ -2,14 +2,13 @@ var particles_a = [];
 var particles_b = [];
 var particles_c = [];
 var nums = 200;
-var noiseScale = 200;
+var noiseScale = 800;
 
 function setup(){
 
     var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
     myCanvas.parent("drawingArea");
 
-    background(21, 8, 50);
     for(var i = 0; i < nums; i++){
         particles_a[i] = new Particle(random(0, width),random(0,height));
         particles_b[i] = new Particle(random(0, width),random(0,height));
@@ -67,4 +66,10 @@ function Particle(x, y){
     this.display = function(r){
         ellipse(this.pos.x, this.pos.y, r, r);
     }
+}
+
+
+function windowResized() {
+    resizeCanvas(window.innerWidth, window.innerWidth);
+
 }
