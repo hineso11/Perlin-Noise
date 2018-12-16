@@ -2,12 +2,12 @@ var particles_a = [];
 var particles_b = [];
 var particles_c = [];
 var nums = 200;
-var noiseScale = 800;
+var noiseScale = 200;
 
 function setup(){
 
     var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
-    myCanvas.parent("mainContent");
+    myCanvas.parent("drawingArea");
 
     background(21, 8, 50);
     for(var i = 0; i < nums; i++){
@@ -46,7 +46,7 @@ function Particle(x, y){
     this.dir = createVector(0, 0);
     this.vel = createVector(0, 0);
     this.pos = createVector(x, y);
-    this.speed = 0.5;
+    this.speed = 0.4;
 
     this.move = function(){
         var angle = noise(this.pos.x/noiseScale, this.pos.y/noiseScale)*TWO_PI*noiseScale;

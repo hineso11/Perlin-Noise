@@ -1,25 +1,29 @@
 
 html, body {
     height: 100%;
-
+    background-color: green;
+    overflow: hidden;
 }
 
-#header {
-    position: relative;
-    height: 12vh;
-    overflow: hidden;
+.headerBar {
+
+    height: 10vh;
     min-height: 75px;
-
-    background: #33334d;
 }
 
-#mainContent {
+.headerColumn {
 
-    position: relative;
-    height: 88vh;
+    background: darkblue;
+    height: 100%;
+}
+
+
+.mainContainer {
+
+    height: 100vh;
+    background: black;
     overflow: hidden;
-
-    background: white;
+    position: relative;
 }
 
 #title {
@@ -27,5 +31,20 @@ html, body {
     color: white;
     padding-left: 2vw;
 
+    background-color: navy;
+    height: 100%;
+
 }
 
+.mainContent {
+
+    height: 90vh;
+    background-color: midnightblue;
+
+}
+
+#drawingArea {
+
+    height: 100%;
+    padding: 0px;
+}
