@@ -1,5 +1,5 @@
 class PerlinNoise {
-    
+
     constructor(parentId, numberOfParticles, noiseScale, numberOfColours) {
 
         var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
@@ -54,6 +54,12 @@ class PerlinNoise {
             }
 
         }
+    }
+
+    clearCanvas () {
+
+
+        clear();
     }
 
 }
