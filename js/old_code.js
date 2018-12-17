@@ -1,8 +1,4 @@
-var particles_a = [];
-var particles_b = [];
-var particles_c = [];
-var nums = 200;
-var noiseScale = 800;
+
 
 function setup(){
 
@@ -70,7 +66,3 @@ function Particle(x, y){
 }
 
 
-function windowResized() {
-    resizeCanvas(window.innerWidth, window.innerWidth);
-
-}
