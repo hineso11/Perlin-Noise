@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="771d276e-cb4e-4c88-b3c1-d57fc3c796c2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/perlin_noise.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/perlin_noise.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,20 +19,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="150" selection-start-line="32" selection-start-column="150" selection-end-line="32" selection-end-column="150" />
+            <state relative-caret-position="615">
+              <caret line="41" column="148" selection-start-line="41" selection-start-column="148" selection-end-line="41" selection-end-column="148" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="controller.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="825">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+            <state relative-caret-position="1620">
+              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
             </state>
           </provider>
         </entry>
@@ -42,15 +51,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="855">
               <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -70,6 +70,7 @@
     <findStrings>
       <find>nums</find>
       <find>noiseScale</find>
+      <find>console</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -86,11 +87,11 @@
         <option value="$PROJECT_DIR$/js/old_cod.js" />
         <option value="$PROJECT_DIR$/js/sketch.js" />
         <option value="$PROJECT_DIR$/new.html" />
-        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/js/old_code.js" />
         <option value="$PROJECT_DIR$/js/perlin_noise.js" />
-        <option value="$PROJECT_DIR$/js/controller.js" />
+        <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/controller.js" />
       </list>
     </option>
   </component>
@@ -212,12 +213,12 @@
       <workItem from="1545049867369" duration="325000" />
       <workItem from="1545050207430" duration="3213000" />
       <workItem from="1545060331481" duration="354000" />
-      <workItem from="1545067802576" duration="1718000" />
+      <workItem from="1545067802576" duration="2635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29234000" />
+    <option name="totallyTimeSpent" value="30151000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1127" height="1599" extended-state="0" />
@@ -530,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/perlin_noise.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
@@ -544,17 +538,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controller.js">
+    <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="39" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
+        <state relative-caret-position="825">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="150" selection-start-line="32" selection-start-column="150" selection-end-line="32" selection-end-column="150" />
+        <state relative-caret-position="615">
+          <caret line="41" column="148" selection-start-line="41" selection-start-column="148" selection-end-line="41" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>

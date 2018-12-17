@@ -5,6 +5,7 @@ const PARENT_ID = "drawingArea";
 function setup () {
     instance = new PerlinNoise(PARENT_ID, 600, 800, 3);
     instance.setup();
+    instance.pauseOrResume();
 }
 
 // Drawing code for canvas
@@ -36,8 +37,6 @@ class PerlinNoise {
 
         for (var i = 0; i < this.numberOfColours; i++) {
 
-            console.log(i);
-
             this.colours[i] = [];
             this.colours[i][0] = random(0, 255);
             this.colours[i][1] = random(0, 255);
@@ -51,7 +50,6 @@ class PerlinNoise {
             }
         }
 
-        this.isPaused = false;
     }
 
 

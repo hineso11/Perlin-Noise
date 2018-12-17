@@ -46,6 +46,17 @@ html, body {
     height: 50%;
 }
 
+.buttonColumn {
+
+    height: 100%;
+    display:table;
+}
+
+.buttonDiv {
+
+    display:table-cell;
+    vertical-align:middle;
+}
 
 .controlButton {
 
