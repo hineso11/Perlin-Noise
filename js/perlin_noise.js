@@ -1,23 +1,27 @@
 class PerlinNoise {
     
-    constructor(parentId, numberOfParticles, noiseScale) {
+    constructor(parentId, numberOfParticles, noiseScale, numberOfColours, colours) {
 
         var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
         myCanvas.parent(parentId);
 
         this.numberOfParticles = numberOfParticles;
         this.noiseScale = noiseScale;
+        this.numberOfColours = numberOfColours;
+        this.colours = colours;
 
         background(21, 8, 50);
 
-        this.particles_a = [];
-        this.particles_b = [];
-        this.particles_c = [];
+        this.particles = [];
 
-        for(var i = 0; i < this.numberOfParticles / 3; i++){
-            this.particles_a[i] = new Particle(random(0, width),random(0,height), this.noiseScale);
-            this.particles_b[i] = new Particle(random(0, width),random(0,height), this.noiseScale);
-            this.particles_c[i] = new Particle(random(0, width),random(0,height), this.noiseScale);
+        for (var i = 0; i < this.numberOfColours; i++) {
+
+            this.particles[i] = [];
+
+            for (var j = 0; j < this.numberOfParticles / numberOfColours; j++) {
+
+                this.particles[i][j] = new Particle(random(0, width),random(0,height), this.noiseScale);
+            }
         }
     }
 
@@ -26,24 +30,24 @@ class PerlinNoise {
 
         noStroke();
         smooth();
-        for(var i = 0; i < this.numberOfParticles / 3; i++){
-            var radius = map(i,0,this.numberOfParticles / 3,1,2);
-            var alpha = map(i,0,this.numberOfParticles / 3,0,250);
 
-            fill(69,33,124,alpha);
-            this.particles_a[i].move();
-            this.particles_a[i].display(radius);
-            this.particles_a[i].checkEdge();
+        for (var i = 0; i < this.numberOfColours; i++) {
 
-            fill(7,153,242,alpha);
-            this.particles_b[i].move();
-            this.particles_b[i].display(radius);
-            this.particles_b[i].checkEdge();
 
-            fill(255,255,255,alpha);
-            this.particles_c[i].move();
-            this.particles_c[i].display(radius);
-            this.particles_c[i].checkEdge();
+            fill(this.colours[i][0],this.colours[i][1],this.colours[i][2],alpha);
+
+            for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
+
+
+                var radius = map(j,0,this.numberOfParticles / this.numberOfColours,1,2);
+                var alpha = map(j,0,this.numberOfParticles / this.numberOfColours,0,250);
+
+                this.particles[i][j].move();
+                this.particles[i][j].display(radius);
+                this.particles[i][j].checkEdge();
+
+            }
+
         }
     }
 
