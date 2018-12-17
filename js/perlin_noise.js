@@ -1,6 +1,6 @@
 class PerlinNoise {
     
-    constructor(parentId, numberOfParticles, noiseScale, numberOfColours, colours) {
+    constructor(parentId, numberOfParticles, noiseScale, numberOfColours) {
 
         var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
         myCanvas.parent(parentId);
@@ -8,13 +8,18 @@ class PerlinNoise {
         this.numberOfParticles = numberOfParticles;
         this.noiseScale = noiseScale;
         this.numberOfColours = numberOfColours;
-        this.colours = colours;
+        this.colours = [];
 
         background(21, 8, 50);
 
         this.particles = [];
 
         for (var i = 0; i < this.numberOfColours; i++) {
+
+            this.colours[i] = [];
+            this.colours[i][0] = random(0, 255);
+            this.colours[i][1] = random(0, 255);
+            this.colours[i][2] = random(0, 255);
 
             this.particles[i] = [];
 
