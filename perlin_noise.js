@@ -2,10 +2,18 @@
 
 class PerlinNoise {
 
-    constructor(parentId, numberOfParticles, noiseScale, numberOfColours) {
+    constructor(parentId, numberOfParticles, noiseScale, numberOfColours, pg) {
 
-        var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
-        myCanvas.parent(parentId);
+        this.pg = pg;
+
+        if (this.pg) {
+
+
+        } else {
+
+            var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+            myCanvas.parent(parentId);
+        }
 
         this.numberOfParticles = numberOfParticles;
         this.noiseScale = noiseScale;
@@ -19,7 +27,14 @@ class PerlinNoise {
 
     setup () {
 
-        background(21, 8, 50);
+        if (this.pg) {
+
+            this.pg.background(21, 8, 50);
+        } else {
+
+            background(21, 8, 50);
+
+        }
 
         this.particles = [];
 
@@ -34,7 +49,14 @@ class PerlinNoise {
 
             for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
-                this.particles[i][j] = new Particle(random(0, width),random(0,height), this.noiseScale);
+                if (this.pg) {
+
+                    this.particles[i][j] = new Particle(random(0, this.pg.width),random(0,this.pg.height), this.noiseScale, this.pg);
+                } else {
+
+                    this.particles[i][j] = new Particle(random(0, width),random(0,height), this.noiseScale, this.pg);
+                }
+
             }
         }
 
@@ -46,19 +68,40 @@ class PerlinNoise {
 
         if (!this.isPaused) {
 
-            noStroke();
-            smooth();
+            if (this.pg) {
+
+                this.pg.noStroke();
+                this.pg.smooth();
+            } else {
+
+                noStroke();
+                smooth();
+            }
+
 
             for (var i = 0; i < this.numberOfColours; i++) {
 
+                if (this.pg) {
 
-                fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
+
+                    this.pg.fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
+                } else {
+
+                    fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
+                }
+
+
 
                 for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
+                    if (this.pg) {
 
-                    var radius = map(j, 0, this.numberOfParticles / this.numberOfColours, 1, 2);
-                    var alpha = map(j, 0, this.numberOfParticles / this.numberOfColours, 0, 250);
+                        var radius = this.pg.map(j, 0, this.numberOfParticles / this.numberOfColours, 1, 2);
+                        var alpha = this.pg.map(j, 0, this.numberOfParticles / this.numberOfColours, 0, 250);
+                    } else {
+                        var radius = map(j, 0, this.numberOfParticles / this.numberOfColours, 1, 2);
+                        var alpha = map(j, 0, this.numberOfParticles / this.numberOfColours, 0, 250);
+                    }
 
                     this.particles[i][j].move();
                     this.particles[i][j].display(radius);
@@ -79,7 +122,14 @@ class PerlinNoise {
 
     reset () {
 
-        clear();
+        if (this.pg) {
+
+            this.pg.clear();
+        } else {
+
+
+            clear();
+        }
         this.setup();
     }
 
@@ -88,7 +138,7 @@ class PerlinNoise {
 
 class Particle {
 
-    constructor(x, y, noiseScale) {
+    constructor(x, y, noiseScale, pg) {
 
         this.direction = createVector(0, 0);
         this.velocity = createVector(0, 0);
@@ -96,6 +146,8 @@ class Particle {
         this.speed = 0.4;
 
         this.noiseScale = noiseScale;
+
+        this.pg = pg;
 
     }
 
@@ -111,19 +163,36 @@ class Particle {
 
     checkEdge () {
 
-        if(this.position.x > width || this.position.x < 0 || this.position.y > height || this.position.y < 0){
-            this.position.x = random(50, width);
-            this.position.y = random(50, height);
+        if (this.pg) {
+
+            if(this.position.x > this.pg.width || this.position.x < 0 || this.position.y > this.pg.height || this.position.y < 0){
+                this.position.x = random(50, this.pg.width);
+                this.position.y = random(50, this.pg.height);
+            }
+        } else {
+
+            if(this.position.x > width || this.position.x < 0 || this.position.y > height || this.position.y < 0){
+                this.position.x = random(50, width);
+                this.position.y = random(50, height);
+            }
         }
+
+
     }
 
     display (r) {
+        if (this.pg) {
 
-        ellipse(this.position.x, this.position.y, r, r);
+            this.pg.ellipse(this.position.x, this.position.y, r, r);
+        } else {
+
+            ellipse(this.position.x, this.position.y, r, r);
+        }
     }
 }
 
 function windowResized() {
+
     resizeCanvas(window.innerWidth, window.innerWidth);
 
 }
