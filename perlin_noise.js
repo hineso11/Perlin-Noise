@@ -1,3 +1,5 @@
+
+
 class PerlinNoise {
 
     constructor(parentId, numberOfParticles, noiseScale, numberOfColours) {
@@ -9,6 +11,13 @@ class PerlinNoise {
         this.noiseScale = noiseScale;
         this.numberOfColours = numberOfColours;
         this.colours = [];
+        this.isPaused = true;
+
+        this.setup();
+        this.pauseOrResume();
+    }
+
+    setup () {
 
         background(21, 8, 50);
 
@@ -23,43 +32,55 @@ class PerlinNoise {
 
             this.particles[i] = [];
 
-            for (var j = 0; j < this.numberOfParticles / numberOfColours; j++) {
+            for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
                 this.particles[i][j] = new Particle(random(0, width),random(0,height), this.noiseScale);
             }
         }
+
     }
+
 
     // Initial setup of the sketch
-    update () {
+    draw () {
 
-        noStroke();
-        smooth();
+        if (!this.isPaused) {
 
-        for (var i = 0; i < this.numberOfColours; i++) {
+            noStroke();
+            smooth();
 
-
-            fill(this.colours[i][0],this.colours[i][1],this.colours[i][2],alpha);
-
-            for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
+            for (var i = 0; i < this.numberOfColours; i++) {
 
 
-                var radius = map(j,0,this.numberOfParticles / this.numberOfColours,1,2);
-                var alpha = map(j,0,this.numberOfParticles / this.numberOfColours,0,250);
+                fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
 
-                this.particles[i][j].move();
-                this.particles[i][j].display(radius);
-                this.particles[i][j].checkEdge();
+                for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
+
+
+                    var radius = map(j, 0, this.numberOfParticles / this.numberOfColours, 1, 2);
+                    var alpha = map(j, 0, this.numberOfParticles / this.numberOfColours, 0, 250);
+
+                    this.particles[i][j].move();
+                    this.particles[i][j].display(radius);
+                    this.particles[i][j].checkEdge();
+
+                }
 
             }
-
         }
+
+
     }
 
-    clearCanvas () {
+    pauseOrResume () {
 
+        this.isPaused = !this.isPaused;
+    }
+
+    reset () {
 
         clear();
+        this.setup();
     }
 
 }

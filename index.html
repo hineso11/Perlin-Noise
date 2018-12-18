@@ -6,7 +6,8 @@
 
         <link rel="stylesheet" href="css/main.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-        <script src="js/controller.js"></script>
+        <script src="perlin_noise.js"></script>
+        <script src="index.js"></script>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -31,7 +32,7 @@
                         <div class="row buttonRow">
                             <div class="col-sm-12 buttonColumn">
                                 <div class="buttonDiv">
-                                    <button type="button" class="btn btn-default btn-block controlButton" onclick="instance.pauseOrResume();">Pause/Resume</button>
+                                    <button type="button" class="btn btn-default btn-block controlButton" onclick="pn.pauseOrResume();">Pause/Resume</button>
                                 </div>
 
                             </div>
@@ -39,7 +40,7 @@
                         <div class="row buttonRow">
                             <div class="col-sm-12 buttonColumn">
                                 <div class="buttonDiv">
-                                    <button type="button" class="btn btn-default btn-block controlButton" onclick="instance.reset();">Reset</button>
+                                    <button type="button" class="btn btn-default btn-block controlButton" onclick="pn.reset();">Reset</button>
                                 </div>
                             </div>
                         </div>
