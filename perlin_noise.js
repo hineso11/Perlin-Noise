@@ -1,32 +1,50 @@
+var Defaults = {
+
+    NUMBER_OF_PARTICLES : 800,
+    NOISE_SCALE : 400,
+    SPEED : 0.4,
+    NUMBER_OF_COLOURS : 3,
+};
 
 
 class PerlinNoise {
 
-    constructor(parentId, numberOfParticles, noiseScale, numberOfColours, pg) {
+    // MARK: Constructors
 
+    // Initialise class with parent id of div to display in, total number of particles,
+    // noise scale, number of colours in graphic and optional graphics object
+    constructor(parentId, pg) {
+
+        // Save the graphics object in the class
         this.pg = pg;
 
-        if (this.pg) {
-
-
-        } else {
-
+        if (!this.pg) {
+            // If there is no graphics object, create a canvas to display drawing on
             var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
+        }
+
+        if (parentId) {
+
+            // Set the parent id of element to place graphics in
             myCanvas.parent(parentId);
         }
 
-        this.numberOfParticles = numberOfParticles;
-        this.noiseScale = noiseScale;
-        this.numberOfColours = numberOfColours;
+        // Initialise variables with given parameter values
+        this.numberOfParticles = Defaults.NUMBER_OF_PARTICLES;
+        this.noiseScale = Defaults.NOISE_SCALE;
+        this.speed = Defaults.SPEED;
+        this.numberOfColours = Defaults.NUMBER_OF_COLOURS;
         this.colours = [];
         this.isPaused = true;
 
-        this.setup();
-        this.pauseOrResume();
+
     }
 
+    // MARK: Functions
+    // Function used to set up the drawing
     setup () {
 
+        // Set the background for the drawing
         if (this.pg) {
 
             this.pg.background(21, 8, 50);
@@ -36,25 +54,31 @@ class PerlinNoise {
 
         }
 
+        // Initialise array for particles arrays to be held in
         this.particles = [];
 
+        // For each colour that the drawing should have
         for (var i = 0; i < this.numberOfColours; i++) {
 
+            // Create a random colour and store it
             this.colours[i] = [];
             this.colours[i][0] = random(0, 255);
             this.colours[i][1] = random(0, 255);
             this.colours[i][2] = random(0, 255);
 
+            // Initialise index of particles array for this colour
             this.particles[i] = [];
 
+            // Loop through (number of particles / number of colours) times so that equal number of each colour are created
             for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
+                // Create new particle object
                 if (this.pg) {
 
-                    this.particles[i][j] = new Particle(random(0, this.pg.width),random(0,this.pg.height), this.noiseScale, this.pg);
+                    this.particles[i][j] = new Particle(random(0, this.pg.width),random(0,this.pg.height), this.pg);
                 } else {
 
-                    this.particles[i][j] = new Particle(random(0, width),random(0,height), this.noiseScale, this.pg);
+                    this.particles[i][j] = new Particle(random(0, width),random(0,height), this.pg);
                 }
 
             }
@@ -63,9 +87,10 @@ class PerlinNoise {
     }
 
 
-    // Initial setup of the sketch
+    // Function used to update the drawing
     draw () {
 
+        // Only update drawing if the drawing isn't paused
         if (!this.isPaused) {
 
             if (this.pg) {
@@ -78,11 +103,12 @@ class PerlinNoise {
                 smooth();
             }
 
-
+            // Loop through each colour particle
             for (var i = 0; i < this.numberOfColours; i++) {
 
-                if (this.pg) {
 
+                // Fill using the current colour
+                if (this.pg) {
 
                     this.pg.fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
                 } else {
@@ -90,10 +116,10 @@ class PerlinNoise {
                     fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
                 }
 
-
-
+                // For each particle in this colour
                 for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
+                    // Create the radius of particle and its alpha
                     if (this.pg) {
 
                         var radius = this.pg.map(j, 0, this.numberOfParticles / this.numberOfColours, 1, 2);
@@ -103,7 +129,7 @@ class PerlinNoise {
                         var alpha = map(j, 0, this.numberOfParticles / this.numberOfColours, 0, 250);
                     }
 
-                    this.particles[i][j].move();
+                    this.particles[i][j].move(this.noiseScale, this.speed);
                     this.particles[i][j].display(radius);
                     this.particles[i][j].checkEdge();
 
@@ -130,7 +156,16 @@ class PerlinNoise {
 
             clear();
         }
-        this.setup();
+    }
+
+    setNoiseScale (noiseScale) {
+
+        this.noiseScale = noiseScale;
+    }
+
+    setSpeed (speed) {
+
+        this.speed = speed;
     }
 
 }
@@ -138,26 +173,23 @@ class PerlinNoise {
 
 class Particle {
 
-    constructor(x, y, noiseScale, pg) {
+    constructor(x, y, pg) {
 
         this.direction = createVector(0, 0);
         this.velocity = createVector(0, 0);
         this.position = createVector(x, y);
-        this.speed = 0.4;
-
-        this.noiseScale = noiseScale;
 
         this.pg = pg;
 
     }
 
-    move () {
+    move (noiseScale, speed) {
 
-        var angle = noise(this.position.x / this.noiseScale, this.position.y / this.noiseScale) * TWO_PI * this.noiseScale;
+        var angle = noise(this.position.x / noiseScale, this.position.y / noiseScale) * TWO_PI * noiseScale;
         this.direction.x = cos(angle);
         this.direction.y = sin(angle);
         this.velocity = this.direction.copy();
-        this.velocity.mult(this.speed);
+        this.velocity.mult(speed);
         this.position.add(this.velocity);
     }
 
