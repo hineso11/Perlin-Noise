@@ -15,6 +15,7 @@ class PerlinNoise {
     // noise scale, number of colours in graphic and optional graphics object
     constructor(pg) {
 
+
         // Save the graphics object in the class
         this.pg = pg;
 
@@ -234,10 +235,4 @@ class Particle {
             ellipse(this.position.x, this.position.y, r, r);
         }
     }
-}
-
-function windowResized() {
-
-    resizeCanvas(window.innerWidth, window.innerWidth);
-
 }
