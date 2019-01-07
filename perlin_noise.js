@@ -13,20 +13,14 @@ class PerlinNoise {
 
     // Initialise class with parent id of HTML element to display in, total number of particles,
     // noise scale, number of colours in graphic and optional graphics object
-    constructor(parentId, pg) {
+    constructor(pg) {
 
         // Save the graphics object in the class
         this.pg = pg;
 
         if (!this.pg) {
             // If there is no graphics object, create a canvas to display drawing on
-            var myCanvas = createCanvas(window.innerWidth, window.innerHeight);
-        }
-
-        if (parentId) {
-
-            // Set the parent id of element to place graphics in
-            myCanvas.parent(parentId);
+            this.myCanvas = createCanvas(window.innerWidth, window.innerHeight);
         }
 
         // Initialise variables with given parameter values
@@ -156,6 +150,11 @@ class PerlinNoise {
 
             clear();
         }
+    }
+
+    setParentId (parentId) {
+
+        this.myCanvas.parent(parentId);
     }
 
     setNoiseScale (noiseScale) {

@@ -2,7 +2,7 @@
 // MARK: Variables and Constants
 var pn = null;
 
-const PARENT_ID = "drawingArea";
+const DRAWING_AREA_ID = "drawingArea";
 const PAUSE_RESUME_BUTTON_ID = "pauseResumeButton";
 const RESET_BUTTON_ID = "resetButton";
 const NOISE_SLIDER_ID = "noiseSlider";
@@ -76,7 +76,8 @@ function numberParticlesChanged () {
 // MARK: p5 functions for drawing demonstration
 function setup () {
 
-    pn = new PerlinNoise(PARENT_ID, null);
+    pn = new PerlinNoise(null);
+    pn.setParentId(DRAWING_AREA_ID);
 
     // Set up the drawing and start it
     pn.setup();
