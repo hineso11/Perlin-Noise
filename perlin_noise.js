@@ -11,7 +11,7 @@ class PerlinNoise {
 
     // MARK: Constructors
 
-    // Initialise class with parent id of div to display in, total number of particles,
+    // Initialise class with parent id of HTML element to display in, total number of particles,
     // noise scale, number of colours in graphic and optional graphics object
     constructor(parentId, pg) {
 
@@ -166,6 +166,20 @@ class PerlinNoise {
     setSpeed (speed) {
 
         this.speed = speed;
+    }
+
+    setNumberOfColours (numberOfColours) {
+
+        this.numberOfColours = numberOfColours;
+        this.reset();
+        this.setup();
+    }
+
+    setNumberOfParticles (numberOfParticles) {
+
+        this.numberOfParticles = numberOfParticles;
+        this.reset();
+        this.setup();
     }
 
 }
