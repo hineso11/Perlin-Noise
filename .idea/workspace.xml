@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="771d276e-cb4e-4c88-b3c1-d57fc3c796c2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/new.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/new.js" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,7 +39,7 @@
       <file leaf-file-name="perlin_noise.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perlin_noise.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
+            <state relative-caret-position="3255">
               <caret line="217" column="108" lean-forward="true" selection-start-line="217" selection-start-column="108" selection-end-line="217" selection-end-column="108" />
             </state>
           </provider>
@@ -48,12 +49,21 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1369">
-                <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+              <first_editor relative-caret-position="1279">
+                <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="old_code.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/old_code.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -116,6 +126,7 @@
         <option value="$PROJECT_DIR$/new.js" />
         <option value="$PROJECT_DIR$/new.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/old_code.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -244,12 +255,12 @@
       <workItem from="1546796737908" duration="3108000" />
       <workItem from="1546856323626" duration="3866000" />
       <workItem from="1546862606665" duration="2050000" />
-      <workItem from="1547033063785" duration="8201000" />
+      <workItem from="1547033063785" duration="9895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66230000" />
+    <option name="totallyTimeSpent" value="67924000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,13 +306,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/perlin_noise.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perlin_noise.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -538,9 +542,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/old_code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/perlin_noise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
+        <state relative-caret-position="3255">
           <caret line="217" column="108" lean-forward="true" selection-start-line="217" selection-start-column="108" selection-end-line="217" selection-end-column="108" />
         </state>
       </provider>
@@ -548,8 +559,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1369">
-            <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+          <first_editor relative-caret-position="1279">
+            <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

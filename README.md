@@ -162,3 +162,41 @@ is on
 
 ## Explanation of Example
 
+To view the example, simply clone this repository and open the `index.html` file in your
+browser. The webpage should comprise of a title bar and an area where the drawing of
+PerlinNoise should appear.
+
+Using the controls in the title bar will allow you to control the drawing and alter its
+properties:
+
+- "Pause/Resume" button: clicking this will allow you to pause and resume the drawing.
+- "Reset" button: clicking this button will clear the contents of the drawing from the
+screen and begin drawing a new picture with reset properties including newly randomised
+colours.
+- "Help" button: clicking this will present instructions helpful for controlling the example.
+- "Noise" slider: adjusting the value of this slider will enable you to control the level
+of noise used to determine the new direction of the particle.
+- "Speed" slider: adjusting the value of this slider will enable you to control the speed
+with which the particles in the drawing move around the screen.
+- "Number of Colours" slider: adjusting the value of this slider will enable you to
+control the number of colours that are randomly generated and assigned to particles in the
+drawing. The adjustment of this slider will also result in the drawing being reset.
+- "Number of Particles" slider: adjusting the value of this slider will enable you to
+control the number of particles that are contained in the drawing. The adjustment of this
+slider will also result in the drawing being reset.
+
+## Acknowledgements
+
+This variation on the idea of Perlin Noise is adapted from Lance Braun's code which is
+available in `old_code.js` and at https://www.openprocessing.org/sketch/613493.
+
+The adaptation of this code is permitted through the Creative Commons Attribution
+ShareALike license. This is available at
+https://creativecommons.org/licenses/by-sa/3.0/legalcode.
+
+
+
+
+
+
+
