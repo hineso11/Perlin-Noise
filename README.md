@@ -130,7 +130,7 @@ called.
 
 ### `pauseOrResume()`
 This function is used to pause or resume the drawing depending on the current state of
-the drawin, ie: if it is paused it will resume and vice versa.
+the drawing, ie: if it is paused it will resume and vice versa.
 #### Parameters
 (None)
 #### Returns
