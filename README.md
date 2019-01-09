@@ -1,4 +1,4 @@
-# Perlin Noise- P5 Summative
+# Perlin Noise
 
 ## Quickstart
 The implementation of PerlinNoise in a project can be as simple as follows:
@@ -161,25 +161,4 @@ is on
 (None)
 
 ## Explanation of Example
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
