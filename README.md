@@ -1,4 +1,4 @@
-# Perlin Noise
+# PerlinNoise
 
 ## Quickstart
 The implementation of PerlinNoise in a project can be as simple as follows:
