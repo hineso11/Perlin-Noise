@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="771d276e-cb4e-4c88-b3c1-d57fc3c796c2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/new.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/perlin_noise.js" beforeDir="false" afterPath="$PROJECT_DIR$/perlin_noise.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -43,7 +37,7 @@
       <file leaf-file-name="perlin_noise.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perlin_noise.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="-1870">
               <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
             </state>
           </provider>
@@ -53,14 +47,28 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1380">
-                <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+              <first_editor relative-caret-position="1024">
+                <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/new.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
@@ -116,10 +124,10 @@
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/.eslintrc.json" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/new.html" />
-        <option value="$PROJECT_DIR$/new.js" />
         <option value="$PROJECT_DIR$/perlin_noise.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/new.js" />
+        <option value="$PROJECT_DIR$/new.html" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -248,12 +256,12 @@
       <workItem from="1546796737908" duration="3108000" />
       <workItem from="1546856323626" duration="3866000" />
       <workItem from="1546862606665" duration="2050000" />
-      <workItem from="1547033063785" duration="4450000" />
+      <workItem from="1547033063785" duration="6599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62479000" />
+    <option name="totallyTimeSpent" value="64628000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,24 +519,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/old_code.js" />
     <entry file="file://$PROJECT_DIR$/.eslintrc.json" />
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+        <state relative-caret-position="975">
+          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state relative-caret-position="420">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -539,16 +550,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="65" column="58" selection-start-line="65" selection-start-column="58" selection-end-line="65" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/perlin_noise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="-1870">
           <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
         </state>
       </provider>
@@ -556,8 +560,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1380">
-            <caret line="92" column="18" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
+          <first_editor relative-caret-position="1024">
+            <caret line="160" column="6" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
