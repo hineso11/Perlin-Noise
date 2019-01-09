@@ -1,20 +1,9 @@
-var Defaults = {
-
-    NUMBER_OF_PARTICLES : 800,
-    NOISE_SCALE : 400,
-    SPEED : 0.4,
-    NUMBER_OF_COLOURS : 3,
-};
-
-
+// Class used to draw a PerlinNoise drawing
 class PerlinNoise {
 
-    // MARK: Constructors
-
-    // Initialise class with parent id of HTML element to display in, total number of particles,
-    // noise scale, number of colours in graphic and optional graphics object
+    // MARK: Constructor
+    // Initialise class with optional graphics object
     constructor(pg) {
-
 
         // Save the graphics object in the class
         this.pg = pg;
@@ -24,18 +13,28 @@ class PerlinNoise {
             this.myCanvas = createCanvas(window.innerWidth, window.innerHeight);
         }
 
-        // Initialise variables with given parameter values
-        this.numberOfParticles = Defaults.NUMBER_OF_PARTICLES;
-        this.noiseScale = Defaults.NOISE_SCALE;
-        this.speed = Defaults.SPEED;
-        this.numberOfColours = Defaults.NUMBER_OF_COLOURS;
+        // Initialise variables with default parameter values
+        this.numberOfParticles = PerlinNoise.getDefaults().NUMBER_OF_PARTICLES;
+        this.noiseScale = PerlinNoise.getDefaults().NOISE_SCALE;
+        this.speed = PerlinNoise.getDefaults().SPEED;
+        this.numberOfColours = PerlinNoise.getDefaults().NUMBER_OF_COLOURS;
         this.colours = [];
         this.isPaused = true;
-
-
     }
 
     // MARK: Functions
+
+    // Function used to hold default parameter values for drawing PerlinNoise
+    static getDefaults () {
+        return {
+            NUMBER_OF_PARTICLES : 800,
+            NOISE_SCALE : 400,
+            SPEED : 0.4,
+            NUMBER_OF_COLOURS : 3,
+        };
+    }
+
+
     // Function used to set up the drawing
     setup () {
 
@@ -46,10 +45,9 @@ class PerlinNoise {
         } else {
 
             background(21, 8, 50);
-
         }
 
-        // Initialise array for particles arrays to be held in
+        // Initialise the array for particles arrays to be held in
         this.particles = [];
 
         // For each colour that the drawing should have
@@ -64,7 +62,7 @@ class PerlinNoise {
             // Initialise index of particles array for this colour
             this.particles[i] = [];
 
-            // Loop through (number of particles / number of colours) times so that equal number of each colour are created
+            // Loop through (number of particles / number of colours) times so that approximately equal number of each colour are created
             for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
                 // Create new particle object
@@ -81,13 +79,13 @@ class PerlinNoise {
 
     }
 
-
     // Function used to update the drawing
     draw () {
 
         // Only update drawing if the drawing isn't paused
         if (!this.isPaused) {
 
+            // Disable drawing the outline and draw geometry with smooth edges
             if (this.pg) {
 
                 this.pg.noStroke();
@@ -98,9 +96,8 @@ class PerlinNoise {
                 smooth();
             }
 
-            // Loop through each colour particle
+            // Loop through each colour particle and update it
             for (var i = 0; i < this.numberOfColours; i++) {
-
 
                 // Fill using the current colour
                 if (this.pg) {
@@ -111,7 +108,7 @@ class PerlinNoise {
                     fill(this.colours[i][0], this.colours[i][1], this.colours[i][2], alpha);
                 }
 
-                // For each particle in this colour
+                // For each particle of this colour
                 for (var j = 0; j < this.numberOfParticles / this.numberOfColours; j++) {
 
                     // Create the radius of particle and its alpha
@@ -124,8 +121,11 @@ class PerlinNoise {
                         var alpha = map(j, 0, this.numberOfParticles / this.numberOfColours, 0, 250);
                     }
 
+                    // Move the particle using given noise scale and speed
                     this.particles[i][j].move(this.noiseScale, this.speed);
+                    // Show the particle as an elipse
                     this.particles[i][j].display(radius);
+                    // Check that the particle hasn't moved off of the drawing, and bring it back on if it has
                     this.particles[i][j].checkEdge();
 
                 }
@@ -136,11 +136,14 @@ class PerlinNoise {
 
     }
 
+    // Function to change the status of the drawing from paused to starting
     pauseOrResume () {
 
+        // Reverse the status of isPaused
         this.isPaused = !this.isPaused;
     }
 
+    // Function to clear the current drawing
     reset () {
 
         if (this.pg) {
@@ -153,21 +156,25 @@ class PerlinNoise {
         }
     }
 
+    // Function to set the ID of the HTML element to show the drawing in
     setParentId (parentId) {
 
         this.myCanvas.parent(parentId);
     }
 
+    // Function to set the noise scale used in moving the particles
     setNoiseScale (noiseScale) {
 
         this.noiseScale = noiseScale;
     }
 
+    // Function to set the speed of the particles in the drawing
     setSpeed (speed) {
 
         this.speed = speed;
     }
 
+    // Function to set the number of colours, also resets and setups drawing again
     setNumberOfColours (numberOfColours) {
 
         this.numberOfColours = numberOfColours;
@@ -175,6 +182,7 @@ class PerlinNoise {
         this.setup();
     }
 
+    // Function to set the number of particles, also resets and setups drawing again
     setNumberOfParticles (numberOfParticles) {
 
         this.numberOfParticles = numberOfParticles;
@@ -184,31 +192,45 @@ class PerlinNoise {
 
 }
 
-
+// Class used by PerlinNoise class to hold and control particles within the drawing
 class Particle {
 
+    // MARK: Constructor
+    // Initialise class with x and y position as well as optional graphics parameter
     constructor(x, y, pg) {
 
+        // Create vectors for direction, velocity and position
         this.direction = createVector(0, 0);
         this.velocity = createVector(0, 0);
         this.position = createVector(x, y);
 
+        // Set the optional graphics parameter
         this.pg = pg;
 
     }
 
+    // MARK: Functions
+
+    // Function used to move a particle to a new position
     move (noiseScale, speed) {
 
+        // Calculate angle to move at using position and noiseScale
         var angle = noise(this.position.x / noiseScale, this.position.y / noiseScale) * TWO_PI * noiseScale;
+        // Use angle to set x and y elements of direction vector
         this.direction.x = cos(angle);
         this.direction.y = sin(angle);
+        // Use direction as base for new velocity
         this.velocity = this.direction.copy();
+        // Multiply velocity vector by speed
         this.velocity.mult(speed);
+        // Add the velocity vector to the position vector to give the new position
         this.position.add(this.velocity);
     }
 
+    // Function to check and re-adjust particle's position based on whether it has gone off-screen or not
     checkEdge () {
 
+        // If particle's position is not in the range of the screen's, then set it to random one within those bounds
         if (this.pg) {
 
             if(this.position.x > this.pg.width || this.position.x < 0 || this.position.y > this.pg.height || this.position.y < 0){
@@ -222,10 +244,9 @@ class Particle {
                 this.position.y = random(50, height);
             }
         }
-
-
     }
 
+    // Function to display the particle in its current position with a given radius as an ellipse
     display (r) {
         if (this.pg) {
 

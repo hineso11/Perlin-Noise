@@ -23,6 +23,9 @@ var numberParticlesSlider = null;
 // Set function to set up various parts of the DOM when the window loads
 window.onload = function () {
 
+    var Defaults = PerlinNoise.getDefaults();
+
+
     // Find all necessary parts of the DOM and set their default values
     pauseResumeButton = document.getElementById(PAUSE_RESUME_BUTTON_ID);
     resetButton = document.getElementById(RESET_BUTTON_ID);
