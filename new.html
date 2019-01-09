@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+    <script src="perlin_noise.js"></script>
+</head>
+<body>
+
+<script>
+
+    // Function called by p5 module to setup the drawing
+    function setup () {
+
+        createCanvas(710, 400);
+        pg = createGraphics(400, 250);
+
+        // Initialise the PerlinNoise class instance with optional graphics parameter
+        pn = new PerlinNoise(pg);
+
+        // Set up the drawing and start it
+        pn.setup();
+        pn.pauseOrResume();
+    }
+
+    // Function called by p5 module to update the drawing
+    function draw() {
+
+        pn.draw();
+        // Draw the image graphics buffer to the screen
+        image(pg, 150, 75);
+    }
+</script>
+</body>
+</html>

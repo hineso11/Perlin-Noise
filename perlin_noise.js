@@ -28,7 +28,7 @@ class PerlinNoise {
     static getDefaults () {
         return {
             NUMBER_OF_PARTICLES : 800,
-            NOISE_SCALE : 400,
+            NOISE_SCALE : 800,
             SPEED : 0.4,
             NUMBER_OF_COLOURS : 3,
         };

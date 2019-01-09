@@ -106,7 +106,7 @@ function numberParticlesChanged () {
 function setup () {
 
     // Initialise the PerlinNoise class instance with null for optional graphics parameter
-    pn = new PerlinNoise(null);
+    pn = new PerlinNoise();
     // Set the ID of the drawing area div on demonstration page
     pn.setParentId(DRAWING_AREA_ID);
 
