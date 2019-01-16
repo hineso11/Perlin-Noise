@@ -241,6 +241,8 @@ The adaptation of this code is permitted through the Creative Commons Attributio
 ShareALike license. This is available at
 https://creativecommons.org/licenses/by-sa/3.0/legalcode.
 
+This project is licensed through the Apache License 2.0. A copy of this is obtainable in
+`LICENSE.md`.
 
 
 
