@@ -159,7 +159,14 @@ class PerlinNoise {
     // Function to set the ID of the HTML element to show the drawing in
     setParentId (parentId) {
 
+        this.parentId = parentId;
         this.myCanvas.parent(parentId);
+    }
+
+    // Function to return the ID of the HTML element the drawing is being shown in
+    getParentId () {
+
+        return this.parentId;
     }
 
     // Function to set the noise scale used in moving the particles
@@ -168,10 +175,22 @@ class PerlinNoise {
         this.noiseScale = noiseScale;
     }
 
+    // Function to get the noise scale used in moving the particles
+    getNoiseScale () {
+
+        return this.noiseScale;
+    }
+
     // Function to set the speed of the particles in the drawing
     setSpeed (speed) {
 
         this.speed = speed;
+    }
+
+    // Function to get the speed of the particles in the drawing
+    getSpeed () {
+
+        return this.speed
     }
 
     // Function to set the number of colours, also resets and setups drawing again
@@ -182,6 +201,12 @@ class PerlinNoise {
         this.setup();
     }
 
+    // Function to get the number of colours
+    getNumberOfColours () {
+
+        return this.numberOfColours
+    }
+
     // Function to set the number of particles, also resets and setups drawing again
     setNumberOfParticles (numberOfParticles) {
 
@@ -190,6 +215,11 @@ class PerlinNoise {
         this.setup();
     }
 
+    // Function to get the number of particles
+    getNumberOfParticles () {
+
+        return this.numberOfParticles;
+    }
 }
 
 // Class used by PerlinNoise class to hold and control particles within the drawing

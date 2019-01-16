@@ -160,6 +160,53 @@ is on
 #### Returns
 (None)
 
+### `getParentId()`
+This function is used to return the ID of the HTML element that the drawing is being displayed
+in
+#### Parameters
+(None)
+#### Returns
+- A string representing the HTML ID
+
+### `getParentId()`
+This function is used to return the ID of the HTML element that the drawing is being displayed
+in
+#### Parameters
+(None)
+#### Returns
+- A string representing the HTML ID
+
+
+### `getNoiseScale()`
+This function is used to return the noise scale being used in the drawing
+#### Parameters
+(None)
+#### Returns
+- An integer representing the noise scale
+
+### `getSpeed()`
+This function is used to return the speed being used to move particles at in the drawing
+#### Parameters
+(None)
+#### Returns
+- A float representing the speed
+
+### `getNumberOfColours()`
+This function is used to return the number of colours being used in the drawing
+#### Parameters
+(None)
+#### Returns
+- An integer representing the number of colours
+
+### `getNumberOfParticles()`
+This function is used to return the number of particles that are in the drawing
+#### Parameters
+(None)
+#### Returns
+- An integer representing the number of particles
+
+
+
 ## Explanation of Example
 
 To view the example, simply clone this repository and open the `index.html` file in your

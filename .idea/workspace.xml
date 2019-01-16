@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="771d276e-cb4e-4c88-b3c1-d57fc3c796c2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/old_code.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/perlin_noise.js" beforeDir="false" afterPath="$PROJECT_DIR$/perlin_noise.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,8 +30,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="1230">
+              <caret line="82" selection-start-line="82" selection-end-line="82" />
             </state>
           </provider>
         </entry>
@@ -39,8 +39,8 @@
       <file leaf-file-name="perlin_noise.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/perlin_noise.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3255">
-              <caret line="217" column="108" lean-forward="true" selection-start-line="217" selection-start-column="108" selection-end-line="217" selection-end-column="108" />
+            <state relative-caret-position="916">
+              <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
             </state>
           </provider>
         </entry>
@@ -49,8 +49,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1279">
-                <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
+              <first_editor relative-caret-position="847">
+                <caret line="191" column="41" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -91,19 +91,20 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>nums</find>
-      <find>noiseScale</find>
       <find>console</find>
       <find>pg</find>
       <find>parent.getGraphics()</find>
       <find>move</find>
       <find>das</find>
       <find>drawin</find>
+      <find>noiseScale</find>
     </findStrings>
     <replaceStrings>
       <replace />
       <replace>200</replace>
       <replace>parent.getGraphics()</replace>
       <replace>parent.prototype.getGraphics()</replace>
+      <replace>_noiseScale</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -122,11 +123,11 @@
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/.eslintrc.json" />
         <option value="$PROJECT_DIR$/index.js" />
-        <option value="$PROJECT_DIR$/perlin_noise.js" />
         <option value="$PROJECT_DIR$/new.js" />
         <option value="$PROJECT_DIR$/new.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/old_code.js" />
+        <option value="$PROJECT_DIR$/perlin_noise.js" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -255,12 +256,14 @@
       <workItem from="1546796737908" duration="3108000" />
       <workItem from="1546856323626" duration="3866000" />
       <workItem from="1546862606665" duration="2050000" />
-      <workItem from="1547033063785" duration="9895000" />
+      <workItem from="1547033063785" duration="11071000" />
+      <workItem from="1547564956779" duration="1264000" />
+      <workItem from="1547652897960" duration="911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67924000" />
+    <option name="totallyTimeSpent" value="71275000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,10 +278,11 @@
     <frame x="0" y="23" width="1636" height="1599" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12652811" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12652811" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32983607" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32918552" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32918033" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32983607" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.0" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -291,7 +295,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,6 +309,18 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2925">
+            <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/perlin_noise.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -511,9 +526,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/old_code.js" />
     <entry file="file://$PROJECT_DIR$/.eslintrc.json" />
-    <entry file="file://$PROJECT_DIR$/new.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
@@ -521,17 +533,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
+    <entry file="file://$PROJECT_DIR$/new.html" />
+    <entry file="file://$PROJECT_DIR$/old_code.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        <state relative-caret-position="270">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -542,25 +548,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/old_code.js">
+    <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="1230">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/perlin_noise.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3255">
-          <caret line="217" column="108" lean-forward="true" selection-start-line="217" selection-start-column="108" selection-end-line="217" selection-end-column="108" />
+        <state relative-caret-position="916">
+          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1279">
-            <caret line="195" lean-forward="true" selection-start-line="195" selection-end-line="195" />
+          <first_editor relative-caret-position="847">
+            <caret line="191" column="41" selection-start-line="191" selection-start-column="41" selection-end-line="191" selection-end-column="41" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
